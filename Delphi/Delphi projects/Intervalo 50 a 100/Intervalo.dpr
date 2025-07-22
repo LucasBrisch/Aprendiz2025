@@ -1,0 +1,35 @@
+program Intervalo;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+var num : integer;
+
+begin
+  try
+    Write ('escolha um numero ');
+    try
+      Readln (num);
+    except
+      Writeln ('entrada invalida! ');
+      Readln;
+      exit
+    end;
+
+    if (num > 50) and (num < 100) then begin
+      writeln ('numero ' + IntToStr (num) + ' entre o intervalo de 50 e 100')
+    end else begin
+      writeln ('numero ' + IntToStr (num) + ' fora do intervalo de 50 e 100')
+    end;
+
+    Readln;
+
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.

@@ -1,0 +1,28 @@
+program Tabuada;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+var I, J: integer;
+begin
+  try
+     for I := 1 to 10 do begin
+      Writeln('Tabuada do ' + inttostr(I));
+       for J := 1 to 10 do begin
+         Writeln ( inttostr(I) + ' X ' + inttostr(J) + ' = ' + inttostr(J * I) );
+       end;
+       Writeln;
+
+     end;
+
+     Readln;
+
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.

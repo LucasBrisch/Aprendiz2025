@@ -1,0 +1,40 @@
+program Soma;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+var result, num1, num2 : integer;
+
+begin
+  try
+    Write ('escolha um numero');
+    try
+      Readln (num1);
+    except
+      Writeln ('numero invalido');
+      Readln;
+      exit
+    end;
+
+    Write ('escolha Outro numero');
+    try
+      Readln (num2);
+    except
+      Writeln ('numero invalido');
+      Readln;
+      exit
+    end;
+
+    result := num2 + num1;
+
+    Writeln ('Resultado: ' + IntToStr(result));
+
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.

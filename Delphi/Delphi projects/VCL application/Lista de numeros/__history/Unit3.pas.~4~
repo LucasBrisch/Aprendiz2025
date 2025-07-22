@@ -1,0 +1,62 @@
+unit Unit3;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm3 = class(TForm)
+    numero: TEdit;
+    Adicionar: TButton;
+    Verificar: TButton;
+    Lista: TListBox;
+    procedure AdicionarClick(Sender: TObject);
+    procedure VerificarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm3.AdicionarClick(Sender: TObject);
+var X: Integer;
+begin
+if TryStrToInt(numero.Text, X) then begin;
+  Lista.Items.Add(numero.Text);
+end else begin
+  ShowMessage ('por favor digite apenas numeros inteiros');
+end;
+end;
+
+procedure TForm3.VerificarClick(Sender: TObject);
+var
+i, num : Integer;
+msg : String;
+begin
+for i := 0 to Lista.Items.Count - 1 do begin
+  if TryStrToInt(Lista.Items[i], num) then begin
+    if ((num > 30) and (num < 40)) or not ((num > 10) and (num < 100)) then begin
+      msg := msg + 'o numero ' + IntToStr (num) + ' é valido!';
+
+
+  end else begin
+    msg := msg + 'o numero ' + IntToStr (num) + ' é invalido!';
+  end;
+  end;
+
+  end;
+
+  ShowMessage (msg);
+
+end;
+
+end.

@@ -1,0 +1,22 @@
+program Hello_name;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+var nome : String;
+
+begin
+  try
+    Write ('Qual o seu nome? ');
+    Readln (nome);
+    Writeln ('Oi ' + nome);
+    Readln;
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.

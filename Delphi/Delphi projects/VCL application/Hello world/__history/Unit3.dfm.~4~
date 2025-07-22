@@ -1,0 +1,50 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 539
+  ClientWidth = 788
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object Panel1: TPanel
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 782
+    Height = 533
+    Align = alClient
+    TabOrder = 0
+    ExplicitLeft = 144
+    ExplicitTop = 80
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object Label1: TLabel
+      Left = 701
+      Top = 1
+      Width = 80
+      Height = 531
+      Align = alRight
+      Alignment = taCenter
+      ExplicitLeft = 112
+      ExplicitHeight = 39
+    end
+    object Button1: TButton
+      Left = 1
+      Top = 1
+      Width = 75
+      Height = 531
+      Align = alLeft
+      Caption = 'Button1'
+      TabOrder = 0
+      OnClick = Button1Click
+      ExplicitLeft = 110
+      ExplicitTop = 16
+      ExplicitHeight = 25
+    end
+  end
+end

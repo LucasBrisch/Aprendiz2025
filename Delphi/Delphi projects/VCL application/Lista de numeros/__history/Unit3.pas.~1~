@@ -1,0 +1,36 @@
+unit Unit3;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm3 = class(TForm)
+    numero: TEdit;
+    Adicionar: TButton;
+    Verificar: TButton;
+    Lista: TListBox;
+    procedure AdicionarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm3.AdicionarClick(Sender: TObject);
+begin
+if numero.Text <> '' then begin;
+  Lista.Items.Add(numero.Text);
+end;
+end;
+
+end.
