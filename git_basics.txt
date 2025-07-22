@@ -27,6 +27,9 @@
    git add .
    git commit -m "mensagem do commit"
    git push origin branch
+   git clone (link do repositorio).git
+   git fetch
+   git pull
 
 ---------------------------------------
 
