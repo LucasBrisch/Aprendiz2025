@@ -1,0 +1,35 @@
+===============================
+🧠 GIT BÁSICO - COMANDOS ÚTEIS
+===============================
+
+1. Configurar usuário global (uma vez só):
+
+   git config --global user.name "Seu Nome"
+   git config --global user.email "seuemail@exemplo.com"
+
+---------------------------------------
+
+2. Iniciar um repositório Git na pasta atual:
+
+   git init
+
+---------------------------------------
+
+3. Adicionar o repositório remoto (GitHub, GitLab, etc):
+
+   git remote add origin (link do repositorio).git
+
+---------------------------------------
+
+📌 Dicas rápidas:
+
+- Ver configurações atuais:
+    git config --list
+
+- Verificar se o remoto foi adicionado:
+    git remote -v
+
+- Se precisar trocar o link do repositório remoto:
+    git remote set-url origin https://novo-link.git
+
+===============================
