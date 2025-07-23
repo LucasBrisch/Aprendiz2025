@@ -99,6 +99,7 @@ begin
 
       if LoginValido(usuario, senha) then begin
         Writeln('Autenticado com sucesso');
+        writeln(tentativas.ToString);
         tentativas := 0;
         Sleep(1000);
         MenuContas();
