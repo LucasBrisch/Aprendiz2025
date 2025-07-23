@@ -7,9 +7,6 @@ program Project1;
 uses
   System.SysUtils;
 
-procedure MenuLogado; forward
-procedure MenuRegistro; forward
-
 const usuarioAdmin: String = 'admin';
       senhaAdmin: String = 'admin';
 var rodando:boolean;
@@ -50,27 +47,6 @@ begin
   Result := num1 * num2;
 end;
 
-procedure MenuRegistro();
-var opcao : integer;
-email, idade, nome : string;
-begin
-  Writeln('|------- Menu ----------|');
-  Writeln('| 1 - Adicionar usuario |');
-  Writeln('| 9 - Sair              |');
-  Writeln('|-----------------------|' + sLineBreak);
-
-  readln (opcao);
-  if opcao = 1 then begin
-    writeln ('qual o nome do usuario?');
-    readln (nome);
-    writeln ('qual o email do usuario?');
-    readln (email);
-    writeln ('qual a idade do usuario?');
-    readln (idade);
-  end;
-
-end;
-
 procedure MenuContas ();
 var opcao : integer;
 num1, num2, resultado : Double;
@@ -80,12 +56,12 @@ writeln ('1 - +');
 writeln ('2 - -');
 writeln ('3 - X');
 writeln ('4 - /');
-writeln ('9 - voltar');
+writeln ('9 - LogOut');
 
 readln (opcao);
 if opcao = 9 then begin
   Writeln ('saindo');
-  menulogado();
+  exit;
 end;
 Writeln ('escolha um numero: ');
 readln (num1);
@@ -98,42 +74,18 @@ if opcao = 1 then begin
 end else if opcao = 2 then begin
   resultado := (subtracao(num1, num2));
   Writeln(FloatToStr(resultado));
-  MenuContas()
+  MenuContas();
 end else if opcao =  3 then begin
   resultado := (multiplicacao(num1, num2));
   Writeln(FloatToStr(resultado));
-  MenuContas()
+  MenuContas();
 end else if opcao = 4 then begin
   resultado := (divisao(num1, num2));
   Writeln(FloatToStr(resultado));
-  MenuContas()
+  MenuContas();
 end;
 
 
-end;
-
-procedure MenuLogado ();
-var opcao : integer;
-begin
-  writeln ('escolha uma opção');
-  writeln ('1 - Calculadora daora');
-  writeln ('2 - Registro de usuários');
-  writeln ('9 - Logout');
-
-  readln (opcao);
-  if opcao = 9 then begin
-    writeln ('saindo');
-    exit;
-  end;
-
-  if opcao = 1 then begin
-    MenuContas();
-  end else if opcao = 2 then begin
-    MenuRegistro();
-  end else begin
-    writeln ('opção invalida');
-    MenuLogado();
-  end;
 end;
 
 
@@ -149,7 +101,7 @@ begin
         Writeln('Autenticado com sucesso');
         tentativas := 0;
         Sleep(1000);
-        MenuLogado();
+        MenuContas();
         Exit;
       end else begin
         Writeln('Credenciais incorretas');
