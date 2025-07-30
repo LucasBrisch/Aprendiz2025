@@ -2,7 +2,9 @@ program Project8;
 
 uses
   Vcl.Forms,
-  main in 'main.pas' {Form3};
+  main in 'main.pas' {Form3},
+  UPlayer in 'UPlayer.pas',
+  UBoss in 'UBoss.pas';
 
 {$R *.res}
 

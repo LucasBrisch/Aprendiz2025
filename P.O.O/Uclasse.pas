@@ -29,15 +29,9 @@ interface
     constructor Create (aDano, aDefesa, aVida, aNivel:integer; aNome, aGenero : String);
   end;
 
-  type Tplayer = class (Tpersonagem)
-   Experiencia: double;
-   Nickname: String;
 
-  end;
 
-  type Tboss = class (Tpersonagem)
 
-  end;
 
 implementation
 

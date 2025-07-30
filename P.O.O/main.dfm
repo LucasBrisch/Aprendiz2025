@@ -34,8 +34,7 @@ object Form3: TForm3
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
-      ExplicitLeft = 124
-      ExplicitTop = 72
+      ExplicitWidth = 143
     end
     object Button1: TButton
       Left = 1
@@ -46,9 +45,6 @@ object Form3: TForm3
       Caption = 'Button1'
       TabOrder = 0
       OnClick = Button1Click
-      ExplicitLeft = -7
-      ExplicitTop = 72
-      ExplicitWidth = 471
     end
     object inputNome: TEdit
       AlignWithMargins = True
@@ -61,9 +57,6 @@ object Form3: TForm3
       Align = alTop
       TabOrder = 1
       TextHint = 'Escolha um nome'
-      ExplicitLeft = 1
-      ExplicitTop = -6
-      ExplicitWidth = 183
     end
     object Panel2: TPanel
       Left = 1
@@ -72,9 +65,6 @@ object Form3: TForm3
       Height = 41
       Align = alTop
       TabOrder = 2
-      ExplicitLeft = 80
-      ExplicitTop = 55
-      ExplicitWidth = 353
       object Masculino: TRadioButton
         Left = 1
         Top = 1
@@ -92,7 +82,6 @@ object Form3: TForm3
         Align = alRight
         Caption = 'Feminino'
         TabOrder = 1
-        ExplicitLeft = 96
       end
     end
     object Panel3: TPanel
@@ -103,9 +92,6 @@ object Form3: TForm3
       Align = alTop
       ShowCaption = False
       TabOrder = 3
-      ExplicitLeft = 10
-      ExplicitTop = 107
-      ExplicitWidth = 553
       object AtackPanel: TPanel
         Left = 371
         Top = 1
@@ -197,7 +183,7 @@ object Form3: TForm3
             Font.Style = []
             ParentFont = False
             OnClick = AtackPlusClick
-            ExplicitTop = 0
+            ExplicitHeight = 37
           end
         end
       end
@@ -271,7 +257,7 @@ object Form3: TForm3
             Font.Style = []
             ParentFont = False
             OnClick = DefenseMinusClick
-            ExplicitTop = 0
+            ExplicitHeight = 37
           end
           object DefensePlus: TLabel
             AlignWithMargins = True
@@ -351,7 +337,7 @@ object Form3: TForm3
             AlignWithMargins = True
             Left = 11
             Top = 1
-            Width = 14
+            Width = 11
             Height = 39
             Margins.Left = 10
             Margins.Top = 0
@@ -366,12 +352,13 @@ object Form3: TForm3
             Font.Style = []
             ParentFont = False
             OnClick = HealthMinusClick
+            ExplicitHeight = 37
           end
           object HealthPlus: TLabel
             AlignWithMargins = True
-            Left = 152
+            Left = 154
             Top = 1
-            Width = 20
+            Width = 18
             Height = 39
             Margins.Left = 0
             Margins.Top = 0
@@ -386,6 +373,8 @@ object Form3: TForm3
             Font.Style = []
             ParentFont = False
             OnClick = HealthPlusClick
+            ExplicitLeft = 152
+            ExplicitHeight = 37
           end
         end
       end

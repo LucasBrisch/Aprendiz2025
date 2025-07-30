@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, uclasse;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, uclasse, uplayer, uboss;
 
 type
   TForm3 = class(TForm)
@@ -163,7 +163,7 @@ end;
 
 procedure TForm3.FormCreate(Sender: TObject);
 begin
-  remaining := 30;
+  remaining := 20;
   baseatq := 10;
   basedef := 10;
   basehealth := 10;
