@@ -1,9 +1,9 @@
-object Form3: TForm3
+﻿object Form3: TForm3
   Left = 0
   Top = 0
   Caption = 'Form3'
-  ClientHeight = 514
-  ClientWidth = 828
+  ClientHeight = 744
+  ClientWidth = 1177
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,59 +12,63 @@ object Form3: TForm3
   Font.Style = []
   OnCreate = FormCreate
   TextHeight = 15
-  object Panel1: TPanel
-    Left = 144
-    Top = 96
-    Width = 553
-    Height = 313
+  object PanelCriarPersonagem: TPanel
+    Left = 296
+    Top = 88
+    Width = 561
+    Height = 353
     TabOrder = 0
     object PontosRestantes: TLabel
       AlignWithMargins = True
       Left = 4
       Top = 75
-      Width = 545
+      Width = 553
       Height = 21
       Margins.Top = 10
       Align = alTop
       Alignment = taCenter
-      Caption = 'Pontos Restantes: 30'
+      Caption = 'Pontos Restantes: X'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
-      ExplicitWidth = 143
+      ExplicitWidth = 134
     end
-    object Button1: TButton
+    object Enviar: TButton
       Left = 1
-      Top = 287
-      Width = 551
+      Top = 327
+      Width = 559
       Height = 25
       Align = alBottom
-      Caption = 'Button1'
+      Caption = 'Enviar'
       TabOrder = 0
-      OnClick = Button1Click
+      OnClick = EnviarClick
+      ExplicitTop = 287
+      ExplicitWidth = 551
     end
     object inputNome: TEdit
       AlignWithMargins = True
       Left = 4
       Top = 1
-      Width = 545
+      Width = 553
       Height = 23
       Margins.Top = 0
       Margins.Bottom = 0
       Align = alTop
       TabOrder = 1
       TextHint = 'Escolha um nome'
+      ExplicitWidth = 545
     end
     object Panel2: TPanel
       Left = 1
       Top = 24
-      Width = 551
+      Width = 559
       Height = 41
       Align = alTop
       TabOrder = 2
+      ExplicitWidth = 551
       object Masculino: TRadioButton
         Left = 1
         Top = 1
@@ -75,23 +79,25 @@ object Form3: TForm3
         TabOrder = 0
       end
       object Feminino: TRadioButton
-        Left = 176
+        Left = 184
         Top = 1
         Width = 374
         Height = 39
         Align = alRight
         Caption = 'Feminino'
         TabOrder = 1
+        ExplicitLeft = 176
       end
     end
     object Panel3: TPanel
       Left = 1
       Top = 99
-      Width = 551
+      Width = 559
       Height = 161
       Align = alTop
       ShowCaption = False
       TabOrder = 3
+      ExplicitWidth = 551
       object AtackPanel: TPanel
         Left = 371
         Top = 1
@@ -373,11 +379,87 @@ object Form3: TForm3
             Font.Style = []
             ParentFont = False
             OnClick = HealthPlusClick
-            ExplicitLeft = 152
             ExplicitHeight = 37
           end
         end
       end
+    end
+  end
+  object main: TPanel
+    Left = 0
+    Top = 528
+    Width = 1177
+    Height = 216
+    Align = alBottom
+    TabOrder = 1
+    object Proxima: TButton
+      Left = 1064
+      Top = 1
+      Width = 112
+      Height = 214
+      Align = alRight
+      Caption = 'Proxima'
+      TabOrder = 0
+    end
+    object Button1: TButton
+      Left = 241
+      Top = 1
+      Width = 150
+      Height = 214
+      Align = alLeft
+      Caption = 'Button1'
+      TabOrder = 1
+      ExplicitLeft = 265
+    end
+    object Button2: TButton
+      Left = 498
+      Top = 1
+      Width = 150
+      Height = 214
+      Align = alLeft
+      TabOrder = 2
+      ExplicitLeft = 668
+      ExplicitTop = -7
+    end
+    object Button3: TButton
+      Left = 755
+      Top = 1
+      Width = 150
+      Height = 214
+      Align = alLeft
+      Caption = 'Button3'
+      TabOrder = 3
+      ExplicitLeft = 720
+    end
+    object espaço: TPanel
+      Left = 391
+      Top = 1
+      Width = 107
+      Height = 214
+      Align = alLeft
+      Caption = 'espa'#231'o'
+      ShowCaption = False
+      TabOrder = 4
+      ExplicitLeft = 409
+    end
+    object espaço2: TPanel
+      Left = 648
+      Top = 1
+      Width = 107
+      Height = 214
+      Align = alLeft
+      ShowCaption = False
+      TabOrder = 5
+      ExplicitLeft = 672
+    end
+    object Espaço3: TPanel
+      Left = 1
+      Top = 1
+      Width = 240
+      Height = 214
+      Align = alLeft
+      ShowCaption = False
+      TabOrder = 6
     end
   end
 end

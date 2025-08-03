@@ -4,12 +4,12 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, uclasse, uplayer, uboss;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, uclasse, uplayer, uboss, formjogo;
 
 type
   TForm3 = class(TForm)
-    Button1: TButton;
-    Panel1: TPanel;
+    Enviar: TButton;
+    PanelCriarPersonagem: TPanel;
     inputNome: TEdit;
     Masculino: TRadioButton;
     Feminino: TRadioButton;
@@ -34,6 +34,14 @@ type
     Panel6: TPanel;
     HealthMinus: TLabel;
     HealthPlus: TLabel;
+    main: TPanel;
+    Proxima: TButton;
+    Button1: TButton;
+    Button2: TButton;
+    Button3: TButton;
+    espaço: TPanel;
+    espaço2: TPanel;
+    Espaço3: TPanel;
     function selectgender : string;
     procedure HealthMinusClick(Sender: TObject);
     procedure counterhandler(plus : boolean);
@@ -43,7 +51,7 @@ type
     procedure DefensePlusClick(Sender: TObject);
     procedure AtackPlusClick(Sender: TObject);
     procedure AtackMinusClick(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure EnviarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -102,7 +110,7 @@ begin
 
 end;
 
-procedure TForm3.Button1Click(Sender: TObject);
+procedure TForm3.EnviarClick(Sender: TObject);
 var name, gender: String;
 begin
  if (not Masculino.Checked) and (not Feminino.Checked) then begin
@@ -114,6 +122,7 @@ begin
  gender := selectgender;
 
  player := tplayer.Create(baseatq, basedef, basehealth, 5, name, gender);
+ PanelCriarPersonagem.Visible := False;
  end;
 end;
 
@@ -171,6 +180,7 @@ begin
   vidastatus.Caption := inttostr(basehealth);
   defesastatus.Caption := inttostr(basedef);
   ataquestatus.Caption := inttostr(baseatq);
+  PanelCriarPersonagem.Visible := True;
 end;
 
 end.
